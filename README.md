@@ -73,6 +73,9 @@ Maven es una herramienta de gestión de proyectos y construcción de software am
 * Ambas interfaces están diseñadas para ser intuitivas y fáciles de usar.
 
 ## Arquitectura
+
+![](/media/arquitectura.png)
+
 ### Cliente:
 * El cliente está compuesto por interfaces de usuario desarrolladas con HTML, CSS y JavaScript.
 * Para el servicio de inicio de sesión, el cliente presenta un formulario donde los usuarios pueden ingresar su nombre de usuario y contraseña.
