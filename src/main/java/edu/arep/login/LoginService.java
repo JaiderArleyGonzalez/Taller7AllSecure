@@ -59,6 +59,21 @@ public class LoginService {
             return response;
 
         });
+        get("/meal", (req, res) -> {
+
+            String iParam = req.queryParams("i");
+            String sParam = req.queryParams("s");
+            String response = "Prueba con otra petición";
+            if (iParam != null) {
+                return URLReader.readURL(URLFOOD + "i=" + iParam);
+
+            } else if (sParam != null) {
+                return URLReader.readURL(URLFOOD + "s=" + sParam);
+
+            }
+            return response;
+
+        });
         initializeUsers();
     }
 

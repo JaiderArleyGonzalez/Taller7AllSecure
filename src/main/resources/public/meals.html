@@ -96,7 +96,7 @@
     <script>
         function fetchMeals() {
             const ingredient = document.getElementById('ingredientInput').value;
-            const url = `https://ec2-44-212-58-187.compute-1.amazonaws.com:5000/meal/filter?i=${ingredient}`;
+            const url = `https://ec2-44-212-58-187.compute-1.amazonaws.com:5000/meal?i=${ingredient}`;
             const sessionCookie = document.cookie;
             fetch(url, {
                 method: 'GET',
