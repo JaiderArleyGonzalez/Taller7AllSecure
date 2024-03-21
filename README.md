@@ -134,6 +134,27 @@ Se obtendrá lo siguiente:
 
 ![](/media/test.png)
 
+## Escalabilidad de la Arquitectura de Seguridad
+
+Para incorporar nuevos servicios a la arquitectura de seguridad, se pueden seguir varias estrategias.
+
+### 1. Separación de Responsabilidades
+
+Identificar las responsabilidades de seguridad específicas de cada servicio y asegúrese de que cada uno tenga su propio conjunto de medidas de seguridad. Esto implica implementar autenticación y autorización independientes para cada servicio, así como gestionar tokens de sesión y políticas de acceso de manera individual.
+
+### 2. Centralización de la Autenticación
+
+Implementar un servicio centralizado de autenticación, como un servidor de autorización OAuth 2.0 o un proveedor de identidad basado en tokens, para manejar la autenticación de los usuarios en todos los servicios. Esto simplificaría la implementación de la autenticación y proporcionaría una capa de seguridad coherente en toda la aplicación.
+
+### 3. Implementación de Políticas de Seguridad Basadas en Roles
+
+Definir roles y permisos específicos para cada servicio y utilizar políticas de seguridad basadas en roles para controlar el acceso a los recursos protegidos. Esto permitirá una gestión más granular de los accesos y una adaptación flexible a los requisitos de seguridad de cada servicio.
+
+### 4. Monitoreo y Auditoría Centralizados
+
+Implementar un sistema centralizado de monitoreo y auditoría de seguridad para supervisar y registrar actividades sospechosas en todos los servicios. Esto ayudará a identificar y responder rápidamente a posibles brechas de seguridad o violaciones.
+
+
 ## Consideraciones
 * La funcionalidad de la aplicación depende de que las instancias de AWS se encuentren corriendo, se usan las DNS de IPv4 públicas asignadas.
 
