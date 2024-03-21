@@ -2,7 +2,7 @@
 El proyecto consiste en un sistema de inicio de sesión y una aplicación para buscar recetas de comida.
 ## Funcionamiento
 
-
+https://github.com/JaiderArleyGonzalez/Taller7AllSecure/assets/89174283/a01748e2-bb83-4b0a-a3d2-f97e820fbacf
 
 ## Prerrequisitos
 1. Java Development Kit (JDK) 17: La aplicación está configurada para compilar y ejecutarse en Java 17. Asegúrate de tener JDK 17 instalado en tu sistema.
