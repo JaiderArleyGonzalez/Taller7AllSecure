@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</head>
+<body>
+<div class="container infinity-container">
+    <div class="row">
+        <div class="col-md-1 infinity-left-space"></div>
+
+        <!-- FORM BEGIN -->
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 text-center infinity-form">
+            <!-- Company Logo -->
+            <div class="text-center mb-3 mt-5">
+                <img src="logo.png" width="150px">
+            </div>
+            <div class="text-center mb-4">
+                <h4>Login into account</h4>
+            </div>
+            <!-- Form -->
+            <form class="px-3" id="loginForm">
+                <!-- Input Box -->
+                <div class="form-input">
+                    <span><i class="fa fa-envelope"></i></span>
+                    <input type="email" id="username" placeholder="User Name" tabindex="10" required>
+                </div>
+                <div class="form-input">
+                    <span><i class="fa fa-lock"></i></span>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+
+                <!-- Login Button -->
+                <div class="mb-3">
+                    <button type="button" class="btn btn-block" onclick="login()">Login</button>
+                </div>
+
+                <!-- Response div -->
+                <div id="response"></div>
+            </form>
+        </div>
+        <!-- FORM END -->
+
+        <div class="col-md-1 infinity-right-space"></div>
+    </div>
+</div>
+
+<script>
+    function login() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+                if (this.status == 200) {
+                    // Si el inicio de sesión es exitoso, redirigir a meals.html
+                    window.location.href = "/meals.html";
+                } else {
+                    // Si hay un error en el inicio de sesión, mostrar el mensaje de error
+                    document.getElementById("response").innerHTML = this.responseText;
+                }
+            }
+        };
+        xhttp.open("GET", "/login?username=" + username + "&password=" + password, true);
+        xhttp.send();
+    }
+</script>
+</body>
+</html>
